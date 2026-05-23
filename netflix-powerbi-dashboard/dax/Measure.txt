@@ -1,0 +1,16 @@
+
+
+
+how many titles are in the dataset
+Total_titles = COUNT(netflix_titles[title])
+
+use to count how many titles are TV Shows or Movie
+TV Shows = CALCULATE(COUNT(netflix_titles[title]),netflix_titles[type] = "TV Show")
+Movies = CALCULATE(COUNT(netflix_titles[title]),netflix_titles[type] = "Movie")
+
+use to obtain the month and year from the column "date_added"
+year_added = YEAR(netflix_titles[date_added])
+month_added = FORMAT(netflix_titles[date_added], "MMMM")
+
+counts unique countries in the column "country"
+countries = DISTINCTCOUNT(netflix_titles[country])
